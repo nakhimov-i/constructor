@@ -1,5 +1,5 @@
-@import "~normalize.css";
-@import "./fonts/fonts.css";
+@import '~normalize.css';
+@import './fonts/fonts.css';
 
 #app {
   position: relative;
@@ -9,7 +9,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  left: 20px;
+  left: 220px;
 }
 
 .sidebar {
