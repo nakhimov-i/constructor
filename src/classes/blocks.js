@@ -20,7 +20,7 @@ export class TitleBlock extends Block {
 
   toHTML() {
     const {
-      tag,
+      tag, //значение по умолчанию
       styles
     } = this.options;
     return row(col(`<${tag}>${this.value}</${tag}>`), styles)
@@ -60,7 +60,11 @@ export class TextColumnsBlock extends Block {
 
   toHTML() {
     const styles = this.options.styles;
-    const html = this.value.map(item => col(item))
-    return row(html.join(''), styles)
+    const arrayFromValues = Array.from(this.value).join('').split(', ');
+
+
+
+    const html = arrayFromValues.map(item => col(item));
+    return row(html.join(''), styles);
   }
 }
